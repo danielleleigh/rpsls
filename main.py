@@ -37,3 +37,9 @@ Spock vaporizes Rock
 
 thing vs thing
 '''
+
+from player import Player
+
+monica = Player()
+
+monica.gesture_selection()
