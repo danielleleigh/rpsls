@@ -33,4 +33,7 @@ Scissors decapitates Lizard
 Lizard eats Paper
 Paper disproves Spock
 Spock vaporizes Rock
+
+
+thing vs thing
 '''
