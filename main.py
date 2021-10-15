@@ -38,8 +38,8 @@ Spock vaporizes Rock
 thing vs thing
 '''
 
-from player import Player
+from ai import AI
 
-monica = Player()
+monica = AI()
 
 monica.gesture_selection()
