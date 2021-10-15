@@ -16,7 +16,7 @@ User stories:
 3. (5 points): As a developer, I want to account for and handle bad user input, ensuring that any user input 
    is validated and reobtained if necessary.
 4. (10 points): As a developer, I want to store all of the gesture options/choices in a list. I want to find
-   a way to utilize the list of gestures within my code (display gesture options, assign player a gesture, etc).
+   a way to utilize the list of gestures within my code (display gesture options, assign player a gesture, etc). rf
 5. (10 points): As a player, I want the correct player to win a given round based on the choices* made by 
 each player.
 (10 points): As a player, I want the game of RPSLS to be at minimum a ‘best of three’ to decide a 
@@ -26,7 +26,7 @@ human) game.
 * Rock crushes Scissors
 Scissors cuts Paper
 Paper covers Rock
-Rock crushes Lizard
+Rock crushes Lizard fsbhfUHrsgh
 Lizard poisons Spock
 Spock smashes Scissors
 Scissors decapitates Lizard
