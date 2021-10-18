@@ -40,4 +40,16 @@ class Player:
             elif gestures == 5:
                 gestures = random.randint(0,4)
                 select = True
-        return self.gesture
+        return self.gesture 
+
+    def battle(self, player1, player2):
+        self.rock = 0
+        self.paper = 1
+        self.scissors = 2
+        self.lizard = 3
+        self.spock = 4
+        if self.rock < self.paper:
+            print("Rock wins!")
+        elif self.rock < self.lizard:
+            print("Rock wins!")
+        

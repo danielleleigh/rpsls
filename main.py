@@ -44,3 +44,6 @@ monica = Human()
 
 player_gesture = monica.gesture_selection()
 print(monica.gestures(player_gesture))
+
+""" gesture and gesture selection functions working properly. 
+all information imports properly. next step is to create battle """
