@@ -18,24 +18,53 @@ class Player:
                 self.select_num = 5                   
         return self.select_num
 
+    # def gestures(self, gestures):
+    #     self.gesture = " "
+    #     select = True
+    #     while select == True:
+    #         if gestures == 0:
+    #             self.gesture = "Rock"
+    #             select = False
+    #         elif gestures == 1:
+    #             self.gesture = "Paper"
+    #             select = False
+    #         elif gestures == 2:
+    #             self.gesture = "Scissors"
+    #             select = False
+    #         elif gestures == 3:
+    #             self.gesture = "Lizard"
+    #             select = False
+    #         elif gestures == 4:
+    #             self.gesture = "Spock"
+    #             select = False
+    #         elif gestures == 5:
+    #             gestures = random.randint(0,4)
+    #             select = True
+    #     return self.gesture 
+
     def gestures(self, gestures):
         self.gesture = " "
         select = True
         while select == True:
             if gestures == 0:
-                self.gesture = "Rock"
+                self.gesture = 0
                 select = False
+                print("Rock")
             elif gestures == 1:
-                self.gesture = "Paper"
+                self.gesture = 1
                 select = False
+                print("Paper")
             elif gestures == 2:
-                self.gesture = "Scissors"
+                self.gesture = 2
                 select = False
+                print("Scissors")
             elif gestures == 3:
-                self.gesture = "Lizard"
+                self.gesture = 3
                 select = False
+                print("Lizard")
             elif gestures == 4:
-                self.gesture = "Spock"
+                self.gesture = 4
+                print("Spock")
                 select = False
             elif gestures == 5:
                 gestures = random.randint(0,4)
@@ -43,13 +72,50 @@ class Player:
         return self.gesture 
 
     def battle(self, player1, player2):
-        self.rock = 0
-        self.paper = 1
-        self.scissors = 2
-        self.lizard = 3
-        self.spock = 4
-        if self.rock < self.paper:
-            print("Rock wins!")
-        elif self.rock < self.lizard:
-            print("Rock wins!")
-        
+        if player1 == 0:
+            if player2 == 1 or player2 == 4:
+                print ("Rock loses")
+            elif player2 == 0:
+                print("Draw")
+            else:
+                print("Rock Wins!")
+        if player1 == 1:
+            if player2 == 2 or player2 == 3:
+                print ("Paper loses")
+            elif player2 == 2:
+                print("Draw")
+            else:
+                print("Paper Wins!")
+        if player1 == 2:
+            if player2 == 0 or player2 == 4:
+                print ("Scissors loses")
+            elif player2 == 2:
+                print("Draw")
+            else:
+                print("Scissor wins!")
+        if player1 == 3:
+            if player2 == 2 or player2 == 0:
+                print ("Lizard loses")
+            elif player2 == 3:
+                print("Draw")
+            else:
+                print("Lizard Wins!")
+        if player1 == 4:
+            if player2 == 3 or player2 == 1:
+                print ("Spock loses")
+            elif player2 == 4:
+                print("Draw")
+            else:
+                print("Spock Wins!")
+
+
+
+'''
+0 Rock 1,4
+1 Paper 2,3
+2 Scissors 0,4
+3 Liz 2,0
+4 Spock 3,1
+'''
+
+#get rid of boolean for gestures_selection/human/robot. 

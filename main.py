@@ -38,12 +38,30 @@ Spock vaporizes Rock
 thing vs thing
 '''
 
-from human import Human
+from game import Game
+
+game_object = Game()
+game_object.run()
+
+
+
+""" from human import Human
+from ai import AI
+from player import Player
+
+robot = AI()
+robot_gesture_select = robot.gesture_selection()
+robot_gesture = robot.gestures(robot_gesture_select)
 
 monica = Human()
+monica_gesture_select = monica.gesture_selection()
+monica_gesture = monica.gestures(monica_gesture_select)
 
-player_gesture = monica.gesture_selection()
-print(monica.gestures(player_gesture))
+battle = Player()
+battle.battle(monica_gesture, robot_gesture) """
+
+
+
 
 """ gesture and gesture selection functions working properly. 
 all information imports properly. next step is to create battle """
