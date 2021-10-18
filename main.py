@@ -42,4 +42,5 @@ from human import Human
 
 monica = Human()
 
-monica.gesture_selection()
+player_gesture = monica.gesture_selection()
+print(monica.gestures(player_gesture))
