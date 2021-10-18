@@ -1,23 +1,32 @@
+from typing import Counter
 from human import Human
 from ai import AI
 from player import Player
 
 class Game:
     def __init__(self):
-        self.player_one = None
-        self.player_two = None
+        self.player_one = Human()
+        self.robot = AI()
         
     def run(self):
-        robot = AI()
-        robot_gesture_select = robot.gesture_selection()
-        robot_gesture = robot.gestures(robot_gesture_select)
+        player1counter= 0
+        player2counter = 0
+                
+        while player1counter < 2 and player2counter < 2:
+            # robot = AI()
+            robot_gesture_select = self.robot.gesture_selection()
+            robot_gesture = self.robot.gestures(robot_gesture_select)
 
-        monica = Human()
-        monica_gesture_select = monica.gesture_selection()
-        monica_gesture = monica.gestures(monica_gesture_select)
+            # player_one = Human()
+            player_one_select = self.player_one.gesture_selection()
+            player_one_gestures = self.player_one.gestures(player_one_select)
 
-        battle = Player()
-        battle.battle(monica_gesture, robot_gesture)
+            battle = Player()
+            result = battle.battle(player_one_gestures, robot_gesture)
+            if result  == "player1":
+                player1counter += 1
+            elif result == "player2":
+                player2counter += 1
 
 
 

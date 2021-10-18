@@ -72,41 +72,56 @@ class Player:
         return self.gesture 
 
     def battle(self, player1, player2):
-        if player1 == 0:
-            if player2 == 1 or player2 == 4:
-                print ("Rock loses")
-            elif player2 == 0:
-                print("Draw")
-            else:
-                print("Rock Wins!")
-        if player1 == 1:
-            if player2 == 2 or player2 == 3:
-                print ("Paper loses")
-            elif player2 == 2:
-                print("Draw")
-            else:
-                print("Paper Wins!")
-        if player1 == 2:
-            if player2 == 0 or player2 == 4:
-                print ("Scissors loses")
-            elif player2 == 2:
-                print("Draw")
-            else:
-                print("Scissor wins!")
-        if player1 == 3:
-            if player2 == 2 or player2 == 0:
-                print ("Lizard loses")
-            elif player2 == 3:
-                print("Draw")
-            else:
-                print("Lizard Wins!")
-        if player1 == 4:
-            if player2 == 3 or player2 == 1:
-                print ("Spock loses")
-            elif player2 == 4:
-                print("Draw")
-            else:
-                print("Spock Wins!")
+            if player1 == 0:
+                if player2 == 1 or player2 == 4:
+                    print ("Rock loses")
+                    return "player2"
+                elif player2 == 0:
+                    print("Draw")
+                    return "Draw"
+                else:
+                    print("Rock Wins!")
+                    return "player1"
+            if player1 == 1:
+                if player2 == 2 or player2 == 3:
+                    print ("Paper loses")
+                    return "player2"
+                elif player2 == 2:
+                    print("Draw")
+                    return "Draw"
+                else:
+                    print("Paper Wins!")
+                    return "player1"
+            if player1 == 2:
+                if player2 == 0 or player2 == 4:
+                    print ("Scissors loses")
+                    return "player2"
+                elif player2 == 2:
+                    print("Draw")
+                    return "Draw"
+                else:
+                    print("Scissor wins!")
+                    return "player1"
+            if player1 == 3:
+                if player2 == 2 or player2 == 0:
+                    print ("Lizard loses")
+                    return "player2"
+                elif player2 == 3:
+                    print("Draw")
+                    return "Draw"
+                else:
+                    print("Lizard Wins!")
+                    return "player1"
+            if player1 == 4:
+                if player2 == 3 or player2 == 1:
+                    print ("Spock loses")
+                    return "player2"
+                elif player2 == 4:
+                    print("Draw")
+                    return "Draw"
+                else:
+                    print("Spock Wins!")
+                    return "player1"
 
 
 
