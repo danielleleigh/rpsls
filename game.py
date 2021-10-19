@@ -18,7 +18,7 @@ class Game:
         print("Thunderdome!")
 
     def game_rules (self):
-            print("RPSLS is played best 2 out of 3.")
+            print("Rock, Paper, Scissors, Lizard, Spock (RPSLS) is played best 2 out of 3.")
             time.sleep(1)
             print("Here is a breakdown of who beats who: ")
             time.sleep(2)
