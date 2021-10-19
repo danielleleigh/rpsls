@@ -10,16 +10,31 @@ class Game:
         self.player_two = Human()
         self.robot = AI()
 
-
     def intro (self):
         print("Welcome")
         time.sleep(1)
         print("To the")
         time.sleep(1)
         print("Thunderdome!")
-        
+
+    def game_rules (self):
+            print("RPSLS is played best 2 out of 3.")
+            time.sleep(1)
+            print("Here is a breakdown of who beats who: ")
+            time.sleep(2)
+            print("Rock crushes Scissors and Lizards.")        
+            time.sleep(2)
+            print("Scissors cut paper and decapitates Lizard.")     
+            time.sleep(2)
+            print("Paper covers rock and disproves Spock.")      
+            time.sleep(2)
+            print("Lizard eats paper and poisons Spock.")     
+            time.sleep(2)
+            print("Spock smashes scissors and vaporizes Rock.")     
+            time.sleep(2)
+
     def run(self):
-        user_selection = int(input("Press 1 to play against a Robot. Press 2 to play 2 player: "))
+        user_selection = int(input("Press 1 for single plater. Press 2 for two player: "))
         player1counter = 0
         player2counter = 0
         if user_selection == 1:
