@@ -56,6 +56,7 @@ class Game:
                     player1counter += 1
                 elif result == "player2":
                     player2counter += 1
+                print("Computer wins!")
         elif user_selection == 2:
             while player1counter < 3 and player2counter < 3:
                 # robot = AI()
