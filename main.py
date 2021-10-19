@@ -41,8 +41,8 @@ thing vs thing
 from game import Game
 
 game_object = Game()
-game_object.intro()
-game_object.game_rules()
+# game_object.intro()
+# game_object.game_rules()
 game_object.run()
 
 
