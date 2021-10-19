@@ -3,17 +3,17 @@ import random
 class Player:
     def __init__(self):
         self.name = "   "
-        self.select_num = []
+        self.select_num = 5
         self.gesture = 5
         self.human = True
     
-    def gesture_selection(self):
+    def gesture_selection(self, player):
         self.select_num = 6
         while self.select_num > 5:
             if self.human == True:
-                self.select_num = int(input("Give me a number between 0-5: "))
+                self.select_num = int(input(f"{player.name} pick a number between 0-5: "))
                 if self.select_num > 5:
-                    print("Incorrect input, try again!")              
+                    print("Incorrect input, try again!")                       
         return self.select_num
 
     # def gestures(self, gestures):
@@ -40,86 +40,85 @@ class Player:
     #             select = True
     #     return self.gesture 
 
-    def gestures(self, gestures):
-        self.gesture_num = " "
+    def gestures(self, player):
         select = True
         while select == True:
-            if gestures == 0:
+            if player == 0:
                 self.gesture_num = 0
                 select = False
                 print("Rock")
-            elif gestures == 1:
+            elif player == 1:
                 self.gesture_num = 1
                 select = False
                 print("Paper")
-            elif gestures == 2:
+            elif player == 2:
                 self.gesture_num = 2
                 select = False
                 print("Scissors")
-            elif gestures == 3:
+            elif player == 3:
                 self.gesture_num = 3
                 select = False
                 print("Lizard")
-            elif gestures == 4:
+            elif player == 4:
                 self.gesture_num = 4
                 print("Spock")
                 select = False
-            elif gestures == 5:
-                gestures = random.randint(0,4)
+            elif player == 5:
+                player = random.randint(0,4)
                 select = True
         return self.gesture_num 
 
     def battle(self, player1, player2):
-            if player1 == 0:
-                if player2 == 1 or player2 == 4:
-                    print ("Rock loses!")
-                    return "player2"
-                elif player2 == 0:
-                    print("Draw")
-                    return "Draw"
-                else:
-                    print("Rock Wins!")
-                    return "player1"
-            if player1 == 1:
-                if player2 == 2 or player2 == 3:
-                    print ("Paper loses!")
-                    return "player2"
-                elif player2 == 2:
-                    print("Draw")
-                    return "Draw"
-                else:
-                    print("Paper Wins!")
-                    return "player1"
-            if player1 == 2:
-                if player2 == 0 or player2 == 4:
-                    print ("Scissors loses!")
-                    return "player2"
-                elif player2 == 2:
-                    print("Draw")
-                    return "Draw"
-                else:
-                    print("Scissor wins!")
-                    return "player1"
-            if player1 == 3:
-                if player2 == 2 or player2 == 0:
-                    print ("Lizard loses!")
-                    return "player2"
-                elif player2 == 3:
-                    print("Draw")
-                    return "Draw"
-                else:
-                    print("Lizard Wins!")
-                    return "player1"
-            if player1 == 4:
-                if player2 == 3 or player2 == 1:
-                    print ("Spock loses!")
-                    return "player2"
-                elif player2 == 4:
-                    print("Draw")
-                    return "Draw"
-                else:
-                    print("Spock Wins!")
-                    return "player1"
+        if player1.gesture_num == 0:
+            if player2.gesture_num == 1 or player2.gesture_num == 4:
+                print (f"{player2.name} wins!")
+                return "player2"
+            elif player2.gesture_num == 0:
+                print("Draw")
+                return "Draw"
+            else:
+                print(f"{player1.name} wins!")
+                return "player1"
+        if player1.gesture_num == 1:
+            if player2.gesture_num == 2 or player2.gesture_num == 3:
+                print (f"{player2.name} wins!")
+                return "player2"
+            elif player2.gesture_num == 2:
+                print("Draw")
+                return "Draw"
+            else:
+                print(f"{player1.name} wins!")
+                return "player1"
+        if player1.gesture_num == 2:
+            if player2.gesture_num == 0 or player2.gesture_num == 4:
+                print (f"{player2.name} wins!")
+                return "player2"
+            elif player2.gesture_num == 2:
+                print("Draw")
+                return "Draw"
+            else:
+                print(f"{player1.name} wins!")
+                return "player1"
+        if player1.gesture_num == 3:
+            if player2.gesture_num == 2 or player2.gesture_num == 0:
+                print (f"{player2.name} wins!")
+                return "player2"
+            elif player2.gesture_num == 3:
+                print("Draw")
+                return "Draw"
+            else:
+                print(f"{player1.name} wins!")
+                return "player1"
+        if player1.gesture_num == 4:
+            if player2.gesture_num == 3 or player2.gesture_num == 1:
+                print (f"{player2.name} wins!")
+                return "player2"
+            elif player2.gesture_num == 4:
+                print("Draw")
+                return "Draw"
+            else:
+                print(f"{player1.name} wins!")
+                return "player1"
 
 
 
