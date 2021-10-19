@@ -11,7 +11,8 @@ class Player:
         self.select_num = 6
         while self.select_num > 5:
             if self.human == True:
-                self.select_num = int(input(f"{player.name} pick a number between 0-5: "))
+                self.select_num = int(input(f""" 0: Rock, 1: Paper, 2: Scissors, 3: Lizard, 4: Spock, 5: Random
+                {player.name} pick a number between 0-5: """))
                 if self.select_num > 5:
                     print("Incorrect input, try again!")                       
         return self.select_num
