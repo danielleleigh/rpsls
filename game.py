@@ -12,7 +12,7 @@ class Game:
         player1counter= 0
         player2counter = 0
                 
-        while player1counter < 2 and player2counter < 2:
+        while player1counter < 3 and player2counter < 3:
             # robot = AI()
             # robot_gesture_select = self.robot.gesture_selection()
             robot_gesture = self.robot.gestures(self.robot.gesture)

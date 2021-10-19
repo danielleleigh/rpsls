@@ -13,9 +13,7 @@ class Player:
             if self.human == True:
                 self.select_num = int(input("Give me a number between 0-5: "))
                 if self.select_num > 5:
-                    print("Incorrect input, try again")
-            elif self.human == False:
-                self.select_num = 5                   
+                    print("Incorrect input, try again")              
         return self.select_num
 
     # def gestures(self, gestures):
@@ -43,33 +41,33 @@ class Player:
     #     return self.gesture 
 
     def gestures(self, gestures):
-        self.gesture = " "
+        self.gesture_num = " "
         select = True
         while select == True:
             if gestures == 0:
-                self.gesture = 0
+                self.gesture_num = 0
                 select = False
                 print("Rock")
             elif gestures == 1:
-                self.gesture = 1
+                self.gesture_num = 1
                 select = False
                 print("Paper")
             elif gestures == 2:
-                self.gesture = 2
+                self.gesture_num = 2
                 select = False
                 print("Scissors")
             elif gestures == 3:
-                self.gesture = 3
+                self.gesture_num = 3
                 select = False
                 print("Lizard")
             elif gestures == 4:
-                self.gesture = 4
+                self.gesture_num = 4
                 print("Spock")
                 select = False
             elif gestures == 5:
                 gestures = random.randint(0,4)
                 select = True
-        return self.gesture 
+        return self.gesture_num 
 
     def battle(self, player1, player2):
             if player1 == 0:
