@@ -4,6 +4,7 @@ from ai import AI
 from player import Player
 import time
 
+
 class Game:
     def __init__(self):
         self.player_one = Human()
@@ -18,7 +19,9 @@ class Game:
         print("Thunderdome!")
 
     def game_rules (self):
-            print("Rock, Paper, Scissors, Lizard, Spock (RPSLS) is played best 2 out of 3.")
+            print("Rock, Paper, Scissors, Lizard, Spock (RPSLS) is played best 2 out of 3. Each gesture correlates with a number.")
+            time.sleep(1)
+            print("Rock is 0, Paper is 1, Scissors is 2, Lizard is 3, Spock is 4. To pick a number randomly, input the number 5. ")
             time.sleep(1)
             print("Here is a breakdown of who beats who: ")
             time.sleep(2)
@@ -31,10 +34,10 @@ class Game:
             print("Lizard eats paper and poisons Spock.")     
             time.sleep(2)
             print("Spock smashes scissors and vaporizes Rock.")     
-            time.sleep(2)
+            time.sleep(2) 
 
     def run(self):
-        user_selection = int(input("Press 1 for single plater. Press 2 for two player: "))
+        user_selection = int(input("Press 1 for single player. Press 2 for two player: "))
         player1counter = 0
         player2counter = 0
         if user_selection == 1:
