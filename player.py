@@ -4,7 +4,7 @@ class Player:
     def __init__(self):
         self.name = "   "
         self.select_num = []
-        self.gesture = 0
+        self.gesture = 5
         self.human = True
     
     def gesture_selection(self):
