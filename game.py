@@ -14,6 +14,7 @@ class Game:
                 
         while player1counter < 2 and player2counter < 2:
             # robot = AI()
+            # robot_gesture_select = self.robot.gesture_selection()
             robot_gesture = self.robot.gestures(self.robot.gesture)
 
             # player_one = Human()
