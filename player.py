@@ -13,7 +13,7 @@ class Player:
             if self.human == True:
                 self.select_num = int(input("Give me a number between 0-5: "))
                 if self.select_num > 5:
-                    print("Incorrect input, try again")              
+                    print("Incorrect input, try again!")              
         return self.select_num
 
     # def gestures(self, gestures):
@@ -72,7 +72,7 @@ class Player:
     def battle(self, player1, player2):
             if player1 == 0:
                 if player2 == 1 or player2 == 4:
-                    print ("Rock loses")
+                    print ("Rock loses!")
                     return "player2"
                 elif player2 == 0:
                     print("Draw")
@@ -82,7 +82,7 @@ class Player:
                     return "player1"
             if player1 == 1:
                 if player2 == 2 or player2 == 3:
-                    print ("Paper loses")
+                    print ("Paper loses!")
                     return "player2"
                 elif player2 == 2:
                     print("Draw")
@@ -92,7 +92,7 @@ class Player:
                     return "player1"
             if player1 == 2:
                 if player2 == 0 or player2 == 4:
-                    print ("Scissors loses")
+                    print ("Scissors loses!")
                     return "player2"
                 elif player2 == 2:
                     print("Draw")
@@ -102,7 +102,7 @@ class Player:
                     return "player1"
             if player1 == 3:
                 if player2 == 2 or player2 == 0:
-                    print ("Lizard loses")
+                    print ("Lizard loses!")
                     return "player2"
                 elif player2 == 3:
                     print("Draw")
@@ -112,7 +112,7 @@ class Player:
                     return "player1"
             if player1 == 4:
                 if player2 == 3 or player2 == 1:
-                    print ("Spock loses")
+                    print ("Spock loses!")
                     return "player2"
                 elif player2 == 4:
                     print("Draw")
