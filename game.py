@@ -24,17 +24,17 @@ class Game:
             print("Rock is 0, Paper is 1, Scissors is 2, Lizard is 3, Spock is 4. To pick a number randomly, input the number 5. ")
             time.sleep(1)
             print("Here is a breakdown of who beats who: ")
-            time.sleep(2)
+            time.sleep(1)
             print("Rock crushes Scissors and Lizards.")        
-            time.sleep(2)
+            time.sleep(1)
             print("Scissors cut paper and decapitates Lizard.")     
-            time.sleep(2)
+            time.sleep(1)
             print("Paper covers rock and disproves Spock.")      
-            time.sleep(2)
+            time.sleep(1)
             print("Lizard eats paper and poisons Spock.")     
-            time.sleep(2)
+            time.sleep(1)
             print("Spock smashes scissors and vaporizes Rock.")     
-            time.sleep(2) 
+            time.sleep(1) 
 
     def run(self):
         user_selection = int(input("Press 1 for single player. Press 2 for two player: "))
@@ -73,6 +73,11 @@ class Game:
                     player1counter += 1
                 elif result == "player2":
                     player2counter += 1
+                if player1counter == 3:
+                    print("Player 1 wins!")
+                elif player2counter == 3:
+                    print("Player 2 wins!")
+
 
     # def run(self):
     #     player1counter= 0
