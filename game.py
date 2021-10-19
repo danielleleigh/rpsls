@@ -5,14 +5,13 @@ from player import Player
 import time
 
 
+
 class Game:
     def __init__(self):
         self.player_one = Human()
         self.player_one.name = "Player 1"
         self.player_two = Human()
         self.player_two.name = "Player 2"
-        self.robot = AI()
-        self.robot.name = "Robot"
 
     def intro (self):
         print("Welcome")
@@ -40,36 +39,19 @@ class Game:
             time.sleep(1) 
 
     def run(self):
-        user_selection = int(input("Press 1 for single player. Press 2 for two player: "))
+        user_selection = int(input("Press 1 for single plater. Press 2 for two player: "))
         player1counter = 0
         player2counter = 0
         if user_selection == 1:
-            while player1counter < 3 and player2counter < 3:
-                # robot = AI()
-                # robot_gesture_select = self.robot.gesture_selection()
-                self.robot.gestures(self.robot.select_num)
-
-                # player_one = Human()
-                self.player_one.gesture_selection(self.player_one)
-                self.player_one.gesture_num = self.player_one.gestures(self.player_one.select_num)
-
-                battle = Player()
-                result = battle.battle(self.player_one, self.robot)
-                if result  == "player1":
-                    player1counter += 1
-                    if player1counter == 3:
-                        print(f"{self.player_one.name} wins the game!")
-                elif result == "player2":
-                    player2counter += 1
-                    if player2counter == 3:
-                        print("Computer wins the game!")
-        elif user_selection == 2:
+            self.player_two.select_num = 5
             while player1counter < 3 and player2counter < 3:
                 self.player_one.gesture_selection(self.player_one)
                 self.player_one.gesture_num = self.player_one.gestures(self.player_one.select_num)
-                self.player_two.gesture_selection(self.player_two)
-                self.player_two.gesture_num = self.player_two.gestures(self.player_two.select_num)
-
+                if self.player_two.select_num == 5:
+                    self.player_two.gesture_num = self.player_two.gestures(self.player_two.select_num)
+                else:
+                    self.player_two.gesture_selection(self.player_two)
+                    self.player_two.gesture_num = self.player_two.gestures(self.player_two.select_num)
                 battle = Player()
                 result = battle.battle(self.player_one, self.player_two)
                 # changed player_one_gestures and player_two_gestures to player_one and player_two, hoping to call their name like player_one.name in the battle
@@ -81,6 +63,14 @@ class Game:
                     player2counter += 1
                     if player2counter == 3:
                         print(f"{self.player_two.name} wins the game!")
+                        
+                        
+"""     You should only have a "player_one" and "player_two" variables.
+    Then when the user chooses single player or multiplayer, we then determine what to set player_two equal to.
+    For example if the select single player we should set "player_two" equal to a AI object.
+    If they choose multiplayer then we should set "player_two" equal to a Human object.
+    Then in your "run" method you no longer need to have your if statement checking the "user_selection"
+    It doesnt matter what player_two is set equal to becuase both AI and Human both have the same method to be called when selecting a gesture.   """       
 
          
     # def run(self):
